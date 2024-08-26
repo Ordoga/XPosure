@@ -12,7 +12,7 @@ export const dbService = {
     insert,
 }
 
-const ID_FIELD = "_id"
+const ID_FIELD = "id"
 
 async function query(collectionName) {
     var collection = storageService.load(collectionName)
