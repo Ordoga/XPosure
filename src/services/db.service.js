@@ -14,14 +14,71 @@ export const dbService = {
 
 const ID_FIELD = "id"
 
+const demoData = {
+    Albums: [
+        {
+            id: "1",
+            createdBy: "123",
+            coverImgUrl: "None",
+            name: "Live Shows",
+            photos: [],
+        },
+        {
+            id: "2",
+            createdBy: "123",
+            coverImgUrl: "None",
+            name: "Weddings",
+            photos: [],
+        },
+        {
+            id: "3",
+            createdBy: "123",
+            coverImgUrl: "None",
+            name: "Festivals",
+            photos: [],
+        },
+        {
+            id: "4",
+            createdBy: "1234",
+            coverImgUrl: "None",
+            name: "Live Shows",
+            photos: [],
+        },
+        {
+            id: "5",
+            createdBy: "123",
+            coverImgUrl: "None",
+            name: "Corperate",
+            photos: [],
+        },
+    ],
+    Users: [
+        {
+            id: "123",
+            fullName: "ordoga",
+            username: "ordoga",
+            password: "ordoga",
+            type: "pro",
+            options: {},
+            albums: [],
+        },
+    ],
+}
+
 async function query(collectionName) {
     var collection = storageService.load(collectionName)
-    if (!collection) collection = []
+    console.log(collection)
+    // TODO For Development Only
+    if (!collection) {
+        storageService.save(collectionName, demoData[collectionName])
+        return Promise.resolve(demoData[collectionName])
+    }
     return Promise.resolve(collection)
 }
 
 async function get(collectionName, id) {
     var collection = await query(collectionName)
+    console.log(collection)
     return collection.find(curr => curr[ID_FIELD] === id)
 }
 

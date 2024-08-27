@@ -1,19 +1,25 @@
 <template>
-    <div class="portfolio page">
-        Portfolio
+    <div> Porfolio </div>
+    <div v-if="user" class="portfolio page">
+        <div>Title</div>
+        <div class="name"> {{ user.fullName }}</div>
     </div>
 </template>
 
 <script>
+import { userService } from '../services/userService'
+
 export default {
     data() {
         return {
-            
+            user : null    
         }
     },
     methods: {
     },
-    created() {
+    async created() {
+        const  { id } = this.$route.params
+        this.user = await userService.getUserById(id)
     },
     components: {
     }

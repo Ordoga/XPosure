@@ -3,15 +3,18 @@
 </template>
 
 <script>
+import { albumService } from '../services/album.service'
+
 export default {
     data() {
         return {
-            
+            album : null
         }
     },
     methods: {
     },
-    created() {
+    async created() {
+        this.album = await albumService.getAlbumById(123)
     },
     components: {
     }
