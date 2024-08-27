@@ -59,6 +59,7 @@ const demoData = {
             username: "ordoga",
             password: "ordoga",
             type: "pro",
+            coverImgUrl: "someUrl",
             options: {},
             albums: [],
         },

@@ -1,12 +1,12 @@
 <template>
     <div> Porfolio </div>
     <div v-if="user" class="portfolio page">
-        <div>Title</div>
-        <div class="name"> {{ user.fullName }}</div>
+        <PortfolioCover :fullname="user.fullName" :coverImgUrl="user.coverImgUrl" />
     </div>
 </template>
 
 <script>
+import PortfolioCover from '../components/PortfolioCover.vue'
 import { userService } from '../services/userService'
 
 export default {
@@ -22,6 +22,7 @@ export default {
         this.user = await userService.getUserById(id)
     },
     components: {
+        PortfolioCover
     }
 }
 </script>
