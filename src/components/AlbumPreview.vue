@@ -1,8 +1,8 @@
 <template>
-        <RouterLink :to="`/portfolio/${id}/${album.id}`" class="album-preview">
-            <div className="img-container" :style="{ backgroundImage: `url(${album.coverImgUrl})`}">
-                <div className="overlay">
-                    <div className="album-title">{{album.name}}</div>
+        <RouterLink class="album-preview" :to="`/portfolio/${id}/${album.id}`" >
+            <div class="img-container" :style="{ backgroundImage: `url(${album.coverImgUrl})`}">
+                <div class="overlay">
+                    <div class="album-title">{{album.name}}</div>
                 </div>
             </div>
         </RouterLink>
@@ -40,13 +40,13 @@ position: relative;
 
 /* Minimum width for responsiveness */
 overflow: hidden;
-transition: flex 0.3s ease;
+transition: flex 0.6s ease, font-size 0.55s ease-in-out;
 font-size: 1.8rem;
 
 &:hover {
     // TODO - Add Transition to text
     flex: 2 1 19%;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     /* Grow on hover */
 }
 
@@ -87,12 +87,18 @@ font-size: 1.8rem;
     }
 
     & .album-title {
-        
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-family: Arial, Helvetica, sans-serif;
         color: white;
         z-index: 1;
         white-space: nowrap;
         overflow: hidden;
+        text-shadow: rgb(0, 0, 0) 0px 5px 15px;
+        
     }
 }
 }

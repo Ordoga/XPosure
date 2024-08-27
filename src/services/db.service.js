@@ -55,11 +55,60 @@ const demoData = {
     Users: [
         {
             id: "123",
-            fullName: "ordoga",
+            fullName: "Or Doga",
+            username: "ordoga",
+            password: "ordoga",
+            title: "Festival Photographer",
+            description:
+                "I am photographer from ramat, specializing in events photography",
+            type: "pro",
+            coverImgUrl: "/concerts.jpg",
+            options: {},
+            albums: [
+                {
+                    id: "1",
+                    createdBy: "123",
+                    coverImgUrl: "/concerts.jpg",
+                    name: "Live Shows",
+                    photos: [],
+                },
+                {
+                    id: "2",
+                    createdBy: "123",
+                    coverImgUrl: "/wedding.jpg",
+                    name: "Weddings",
+                    photos: [],
+                },
+                {
+                    id: "3",
+                    createdBy: "123",
+                    coverImgUrl: "/corporate.jpg",
+                    name: "Corporate",
+                    photos: [],
+                },
+                {
+                    id: "2",
+                    createdBy: "123",
+                    coverImgUrl: "/wedding.jpg",
+                    name: "Weddings",
+                    photos: [],
+                },
+                {
+                    id: "3",
+                    createdBy: "123",
+                    coverImgUrl: "/corporate.jpg",
+                    name: "Corporate",
+                    photos: [],
+                },
+            ],
+        },
+        {
+            id: "1234",
+            fullName: "Or Doga",
             username: "ordoga",
             password: "ordoga",
             type: "pro",
-            coverImgUrl: "someUrl",
+            coverImgUrl: "",
             options: {},
             albums: [
                 {

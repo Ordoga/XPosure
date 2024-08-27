@@ -1,6 +1,6 @@
 <template>
     <div v-if="user" class="portfolio page">
-        <PortfolioCover :fullname="user.fullName" :coverImgUrl="user.coverImgUrl" />
+        <PortfolioCover :fullname="user.fullName" :coverImgUrl="user.coverImgUrl" :title="user.title"/>
         <AlbumList :albums="user.albums"/>
     </div>
 </template>
