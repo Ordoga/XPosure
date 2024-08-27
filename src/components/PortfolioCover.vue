@@ -1,6 +1,8 @@
 <template>
-    <div>{{fullname}}</div>
-    <div>{{coverImgUrl}}</div>
+    <section class="album-cover">
+        <div>{{fullname}}</div>
+        <div>{{coverImgUrl}}</div>
+    </section>
 </template>
 
 <script>
@@ -30,5 +32,11 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
+.album-cover {
+    width: 300px;
+    heigth: 300px;
+    background-color: antiquewhite;
+}
 
 </style>
