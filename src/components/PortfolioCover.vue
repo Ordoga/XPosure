@@ -35,7 +35,7 @@ export default {
 
 .album-cover {
     width: 300px;
-    heigth: 300px;
+    height: 100px;
     background-color: antiquewhite;
 }
 

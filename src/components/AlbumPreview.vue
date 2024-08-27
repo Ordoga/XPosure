@@ -1,11 +1,11 @@
 <template>
-        <div className="album-preview">
+        <RouterLink :to="`/portfolio/${id}/${album.id}`" class="album-preview">
             <div className="img-container" :style="{ backgroundImage: `url(${album.coverImgUrl})`}">
                 <div className="overlay">
                     <div className="album-title">{{album.name}}</div>
                 </div>
             </div>
-        </div>
+        </RouterLink>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            
+            id : this.$route.params.id
         }
     },
     methods: {
@@ -33,7 +33,7 @@ export default {
 <style lang='scss' scoped>
 .album-preview {
 
-flex: 1 1 20%;
+flex: 1 1 10%;
 /* Initial flex-basis set to 20% of the container */
 position: relative;
 
@@ -41,9 +41,12 @@ position: relative;
 /* Minimum width for responsiveness */
 overflow: hidden;
 transition: flex 0.3s ease;
+font-size: 1.8rem;
 
 &:hover {
-    flex: 3 1 20%;
+    // TODO - Add Transition to text
+    flex: 2 1 19%;
+    font-size: 2.4rem;
     /* Grow on hover */
 }
 
@@ -74,18 +77,22 @@ transition: flex 0.3s ease;
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     &:hover .overlay {
         background: rgba(0, 0, 0, 0);
+
         cursor: pointer;
     }
 
     & .album-title {
+        
         font-family: Arial, Helvetica, sans-serif;
         color: white;
-        font-size: 2.4rem;
         z-index: 1;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }
 }

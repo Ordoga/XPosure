@@ -31,7 +31,7 @@ export default {
 
 <style lang='scss' scoped>
 .album-list {
-    height: 25vh;
+    height: 15vw;
     width: 80vw;
 
     display: flex;

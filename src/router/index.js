@@ -1,5 +1,6 @@
 import Home from "../pages/Home.vue"
 import Portfolio from "../pages/Portfolio.vue"
+import AlbumView from "../pages/AlbumView.vue"
 
 import { createRouter, createWebHistory } from "vue-router"
 
@@ -15,6 +16,11 @@ const router = createRouter({
             path: "/portfolio/:id",
             name: "Portfolio",
             component: Portfolio,
+        },
+        {
+            path: "/portfolio/:id/:albumId",
+            name: "AlbumView",
+            component: AlbumView,
         },
     ],
 })
