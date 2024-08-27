@@ -21,7 +21,11 @@ const demoData = {
             createdBy: "123",
             coverImgUrl: "/concerts.jpg",
             name: "Live Shows",
-            photos: [],
+            photos: [
+                "https://res.cloudinary.com/dsep8u8y0/image/upload/v1724797943/lrvs9j55ccdrql07ps0g.jpg",
+                "https://res.cloudinary.com/dsep8u8y0/image/upload/v1724797963/jamf1ngki9zkklqmigcw.jpg",
+                "https://res.cloudinary.com/dsep8u8y0/image/upload/v1724797977/nin6nlaypwlxwvd1dii5.jpg",
+            ],
         },
         {
             id: "2",

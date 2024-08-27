@@ -31,7 +31,7 @@ async function remove(userId) {
 
 async function save(user) {
     try {
-        const updatedUser = undefined
+        let updatedUser = undefined
         if (user.id) {
             updatedUser = await dbService.put(COLLETION_NAME, user)
         } else {
