@@ -5,10 +5,7 @@
         <div class="album-name">{{ album.photos }}</div>
 
         <div class="img-container" v-for="photo in album.photos" :key="photo">
-
-
                 <img class="img" :src="photo" />
-                
             </div>
         </div>
 </template>
@@ -28,7 +25,7 @@ export default {
             ev.preventDefault()
             const  { files } = ev.target
             const urlList = await uploadService.uploadImages(this.album.id, files)
-            this.album.push(...urlList)
+            this.album.photos.push(...urlList)
         }
     },
     async created() {
